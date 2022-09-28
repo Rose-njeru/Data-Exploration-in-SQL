@@ -1,6 +1,6 @@
  /* 
  Covid 19 Data Exploration 
-Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+Skills used: Joins, CTE's,  Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
 */
 -- overview of  the Covid-19  data
 
@@ -116,9 +116,9 @@ FROM popvsvacc;
 -- creating view for later Vizualization
 
 CREATE VIEW  percentpopulationvaccinated AS
-select  dea.continent,dea.location,dea.date,dea.population,vac.new_vaccinations,SUM(CAST(vac.new_vaccinations AS unsigned)) over(partition by dea.location order by dea.location,dea.date) as rolling_people_vaccinated
+SELECT  dea.continent,dea.location,dea.date,dea.population,vac.new_vaccinations,SUM(CAST(vac.new_vaccinations AS unsigned)) over(partition by dea.location order by dea.location,dea.date) as rolling_people_vaccinated
  FROM `portfolio project`.`covid-19 deaths`AS dea
-JOIN `portfolio project`.`covid vaccinations`ASvac
+JOIN `portfolio project`.`covid vaccinations`AS vac
 ON dea.location=vac.location
 AND  dea.date=vac.date 
 WHERE dea.continent IS NOT NULL
