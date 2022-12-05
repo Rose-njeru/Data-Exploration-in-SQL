@@ -5,36 +5,34 @@
 ### Introduction
 Two  CSV tables were created from the Covid-19 dataset  using Excel 
 
-~ The deaths tables indicating deaths across diffrent regions in the world,the population,continent,date,location
++ The deaths tables indicating deaths across diffrent regions in the world,the population,continent,date,location
 
-~ The Vaccinations tables indicating vaccinations across diffrent regions in the world,the population, continent,date,location
++ The Vaccinations tables indicating vaccinations across diffrent regions in the world,the population, continent,date,location
 
 ### Analysis
 
- Querries using death table were used to indicate;
+The data was  used  to analyse ;
 
-~ Total Versus Population
++ Total Versus Population
++ Highest death Count
++ GLobal Numbers
++ Percentage of people infected 
++ Comparison of infection rate and Population 
++ By Joining death table to vaccinations table to compare total people vaccinated versus the population
 
-~ Highest death Count
+#### Aggregate  Functions 
 
-~ GLobal Numbers
++ SUM(),MAX(),AVG()
 
-~ Percentage of people infected 
-
-~ Comparison of infection rate and Population 
-
-~ Joining to vaccinations table to compare total people vaccinated versus the population
-
-#### Functions 
-
-~ SUM(),MAX(),OVER() 
+#### Window functions
++ OVER()
 
 #### VIEW
 Creating view that was used for visualization  in Tableau
 
 #### Join
  
- ~ Joining the death and vaccinations table using location and date
+ + Joining the death and vaccinations table using location and date
  
 
 
